@@ -6,8 +6,10 @@ function setup() {
 
 function draw() {
   // put drawing code here
+
   background(204);
-  ellipse(278, -100, 400, 400);
-  ellipse(120, 100, 110, 110);  
-  ellipse(412, 60, 18, 18);
+  arc(90, 60, 80, 80, 0, HALF_PI);
+  arc(190, 60, 80, 80, 0, PI+HALF_PI);
+  arc(290, 60, 80, 80, PI, TWO_PI+HALF_PI);
+  arc(390, 60, 80, 80, QUARTER_PI, PI+QUARTER_PI);
 }

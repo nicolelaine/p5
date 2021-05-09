@@ -2,20 +2,19 @@ function setup() {
   // put setup code here
 
   createCanvas(480, 120);
-  strokeWeight(12);
+
 
 }
 
 function draw() {
   // put drawing code here
-  background(204);
-  strokeJoin(ROUND); //round the stoke corners
-  rect(40, 25, 70, 70);
-  strokeJoin(BEVEL) //bevel the stroke corners
-  rect(140, 25, 70, 70);
-  strokeCap(SQUARE) //square the line endings
-  line(270, 25, 340, 95);
-  strokeCap(ROUND) //round the line endings
-  line(350, 25, 420, 95);
+  background(0);                //Black
+  fill(204);                    //Light Gray
+  ellipse(132, 82, 200, 200);   //Light gray circle
+  fill(153);                    //Medium gray
+  ellipse(226, -16, 200, 200);  //Medium gray circle
+  fill(102);                    //Dark gray
+  ellipse(268, 118, 200, 200)    //dark gray circle
+
 
 }

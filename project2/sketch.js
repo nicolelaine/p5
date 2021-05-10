@@ -13,6 +13,6 @@ function draw() {
   ellipse(132, 82, 200, 200);   //Gray Circle
   noFill();                    //Turn off fill
   ellipse(226, -16, 200, 200);  //Outline circle with no fill
-  noStrokeFill();                 //Turn off stroke
+  fill(255);
   ellipse(268, 118, 200, 200);   //Doesn't draw!
   }

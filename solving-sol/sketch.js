@@ -3,6 +3,7 @@ function setup() {
 
   createCanvas(900, 600);
   strokeWeight(10);
+
 }
 
 function draw() {
@@ -11,7 +12,7 @@ function draw() {
   background(200);
 
   //left set of rectangles
-  fill (255);
+  fill (255);  //set white color
  // line (20, 10, 500, 500);
   rect (90, 100, 140, 170);     //upper left
   rect (230, 100, 140, 170);    //upper right
@@ -61,12 +62,58 @@ function draw() {
     line (370, 300, 345, 273);     //ninth diagnoal line - from the bottom
 
 
+    //****************************************************************************************
+
+
+    //right set of rectangles
+    rect(499, 100, 140, 170);      //upper left
+    rect (640, 100, 140, 170);     //upper right
+    rect (499, 270, 140, 170);     //botom left
+    rect (640, 270, 140, 170);     //bottom right
 
 
 
- //right set of rectangles
- rect(499, 100, 140, 170);      //upper left
- rect (640, 100, 140, 170);     //upper right
- rect (499, 270, 140, 170);     //botom left
- rect (640, 270, 140, 170);     //bottom right
+    //vertical lines in the right set - uppper left
+
+  line (520, 100, 520, 270);  //first vertical line
+  line (545, 100, 545, 270);  //second vertical line
+  line (570, 100, 570, 270);  //third vertical line
+  line (595, 100, 595, 270);  //fourth vertical line
+  line (617, 100, 617, 270);  //fifth vertical line
+
+  //horizontal lines in the right set - uppper right
+  
+  line (645, 120, 775, 120);  //first horizontal line
+  line (645, 140, 775, 140);  //second horizontal line
+  line (645, 162, 775, 162);  //third horizontal line
+  line (645, 184, 775, 184);  //fourth horizontal line
+  line (645, 207, 775, 207);  //fifth horizontal line
+  line (645, 230, 775, 230);  //sixth horizontal line
+  line (645, 250, 775, 250);  //seventh horizontal line
+
+  //diagnoal lines in the rigth set - bottom left
+
+  line (499, 300, 520, 275);  //first diagonal line from top, bottom to top
+  line (499, 335, 550, 275);  //second diagonal line from top, bottom to top
+  line (499, 365, 575, 275);  //third diagonal line from top, bottom to top
+  line (499, 405, 605, 275);  //forth diagonal line from top, bottom to top
+  line (499, 440, 635, 275);  //middle line - fith line from the top, bottom to top
+  line (530, 440, 640, 305);    //sixth diagonal line from top, bottom to top
+  line (560, 440, 640, 340);  //seventh diagonal line from top, bottom to top
+  line (590, 440, 640, 380);  //eight diagonal line from top, bottom to top
+  line (615, 440, 640, 410);  //ninth diagonal line from top, bottom to top
+
+
+    //diagnoal lines in the rigth set - bottom right
+
+    line (665, 440, 640, 410);
+    line (692, 440, 640, 380);
+    line (720, 440, 640, 341);
+    line (750, 440, 640, 307);
+    line (780, 440, 640, 270);  //middle line
+    line (780, 405, 670, 270);
+    line (780, 370, 700, 270);
+    line (780, 334, 727, 270);
+    line (780, 305, 755, 270);
+
 }

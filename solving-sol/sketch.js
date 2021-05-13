@@ -50,8 +50,15 @@ function draw() {
 
 //diagonal lines in the left set - bottom right
 
-
-
+    line (260, 440, 230, 405);   //first diagnoal line - from the bottom (started at bottom of the rectangle and went up to the side towward the left)
+    line (290, 440, 230, 375);   //second diagnoal line - from the bottom
+    line (320, 440, 230, 342);    //third diagnoal line - from the bottom
+    line (350, 440, 230, 304);    //fourth diagnoal line - from the bottom
+    line (370, 433, 230, 273);  //middle line  - fifth diagnoal line - from the bottom
+    line (370, 397, 260, 273);    //sixth diagnoal line - from the bottom
+    line (370, 360, 290, 273);     //seventh diagnoal line - from the bottom
+    line (370, 325, 320, 273);     //eigth diagnoal line - from the bottom
+    line (370, 300, 345, 273);     //ninth diagnoal line - from the bottom
 
 
 

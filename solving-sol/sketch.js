@@ -3,6 +3,7 @@ function setup() {
 
   createCanvas(900, 600);
   strokeWeight(10);
+  
 
 }
 
@@ -10,10 +11,14 @@ function draw() {
     // put drawing code here
 
   background(200);
+  strokeCap(SQUARE);
 
   //left set of rectangles
-  fill (255);  //set white color
- // line (20, 10, 500, 500);
+  fill (255);  //set white color for rectangles
+
+  
+ stroke(0, 0, 0);  //set the rectanges and lines to be black
+
   rect (90, 100, 140, 170);     //upper left
   rect (230, 100, 140, 170);    //upper right
   rect (90, 270, 140, 170);     //bottom left
@@ -56,16 +61,17 @@ function draw() {
     line (320, 440, 230, 342);    //third diagnoal line - from the bottom
     line (350, 440, 230, 304);    //fourth diagnoal line - from the bottom
     line (370, 433, 230, 273);  //middle line  - fifth diagnoal line - from the bottom
-    line (370, 397, 260, 273);    //sixth diagnoal line - from the bottom
-    line (370, 360, 290, 273);     //seventh diagnoal line - from the bottom
-    line (370, 325, 320, 273);     //eigth diagnoal line - from the bottom
-    line (370, 300, 345, 273);     //ninth diagnoal line - from the bottom
+    line (370, 397, 260, 270);    //sixth diagnoal line - from the bottom
+    line (370, 360, 290, 270);     //seventh diagnoal line - from the bottom
+    line (370, 325, 320, 270);     //eigth diagnoal line - from the bottom
+    line (370, 300, 345, 270);     //ninth diagnoal line - from the bottom
 
 
     //****************************************************************************************
 
 
     //right set of rectangles
+  
     rect(499, 100, 140, 170);      //upper left
     rect (640, 100, 140, 170);     //upper right
     rect (499, 270, 140, 170);     //botom left
@@ -82,7 +88,7 @@ function draw() {
   line (617, 100, 617, 270);  //fifth vertical line
 
   //horizontal lines in the right set - uppper right
-  
+  stroke(253, 214, 56);  //setting the yellow color
   line (645, 120, 775, 120);  //first horizontal line
   line (645, 140, 775, 140);  //second horizontal line
   line (645, 162, 775, 162);  //third horizontal line
@@ -92,11 +98,11 @@ function draw() {
   line (645, 250, 775, 250);  //seventh horizontal line
 
   //diagnoal lines in the rigth set - bottom left
-
-  line (499, 300, 520, 275);  //first diagonal line from top, bottom to top
-  line (499, 335, 550, 275);  //second diagonal line from top, bottom to top
-  line (499, 365, 575, 275);  //third diagonal line from top, bottom to top
-  line (499, 405, 605, 275);  //forth diagonal line from top, bottom to top
+  stroke(255, 0, 0);   //setting the red color
+  line (499, 300, 520, 272);  //first diagonal line from top, bottom to top
+  line (499, 335, 550, 272);  //second diagonal line from top, bottom to top
+  line (499, 365, 575, 272);  //third diagonal line from top, bottom to top
+  line (499, 405, 605, 272);  //forth diagonal line from top, bottom to top
   line (499, 440, 635, 275);  //middle line - fith line from the top, bottom to top
   line (530, 440, 640, 305);    //sixth diagonal line from top, bottom to top
   line (560, 440, 640, 340);  //seventh diagonal line from top, bottom to top
@@ -105,7 +111,7 @@ function draw() {
 
 
     //diagnoal lines in the rigth set - bottom right
-
+    stroke (49, 180, 228);  //setting the blue color
     line (665, 440, 640, 410);    //first diagnoal line - from the bottom (started at bottom of the rectangle and went up to the side towward the left)
     line (692, 440, 640, 380);  //second diagnoal line - from the bottom
     line (720, 440, 640, 341);  //third diagnoal line - from the bottom
@@ -117,5 +123,14 @@ function draw() {
     line (780, 305, 755, 270);  //ninth diagnoal line - from the bottom
 
 
-    
+      //this part is so the rectangles run again and hide the
+      //end of the lines behind their lines
+    noFill(0);
+    stroke(0, 0, 0);
+    rect(499, 100, 140, 170);      //upper left
+    rect (640, 100, 140, 170);     //upper right
+    rect (499, 270, 140, 170);     //botom left
+    rect (640, 270, 140, 170);     //bottom right
+
+
 }

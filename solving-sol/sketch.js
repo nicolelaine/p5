@@ -106,14 +106,16 @@ function draw() {
 
     //diagnoal lines in the rigth set - bottom right
 
-    line (665, 440, 640, 410);
-    line (692, 440, 640, 380);
-    line (720, 440, 640, 341);
-    line (750, 440, 640, 307);
-    line (780, 440, 640, 270);  //middle line
-    line (780, 405, 670, 270);
-    line (780, 370, 700, 270);
-    line (780, 334, 727, 270);
-    line (780, 305, 755, 270);
+    line (665, 440, 640, 410);    //first diagnoal line - from the bottom (started at bottom of the rectangle and went up to the side towward the left)
+    line (692, 440, 640, 380);  //second diagnoal line - from the bottom
+    line (720, 440, 640, 341);  //third diagnoal line - from the bottom
+    line (750, 440, 640, 307);  //fourth diagnoal line - from the bottom
+    line (780, 440, 640, 270);  //middle line - fifth diagnoal line - from the bottom
+    line (780, 405, 670, 270);  //sixth diagnoal line - from the bottom
+    line (780, 370, 700, 270);  //seventh diagnoal line - from the bottom
+    line (780, 334, 727, 270);  //eight diagnoal line - from the bottom
+    line (780, 305, 755, 270);  //ninth diagnoal line - from the bottom
 
+
+    
 }

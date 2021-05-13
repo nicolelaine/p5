@@ -1,6 +1,6 @@
 
-var y = 60;  //y variable 
-var d = 80;  //diameter variable
+var y = 100;  //y variable 
+var d = 130;  //diameter variable
 
 function setup() {
   // put setup code here

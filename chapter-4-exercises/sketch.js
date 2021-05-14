@@ -1,8 +1,8 @@
 
 var x = 60;            // x coordinate
-var y = 420;            // y coordinate
-var bodyHeight = 110;   //Body height
-var neckHeight = 140;   //Neck height
+var y = 310;            // y coordinate
+var bodyHeight = 80;   //Body height
+var neckHeight = 10;   //Neck height
 var radius = 45;
 var ny = y - bodyHeight - neckHeight - radius;  //Neck Y
 

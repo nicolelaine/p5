@@ -21,7 +21,7 @@ function draw() {
   //line (380, 40, 440, 80);
 
   //code that is in a for loop
-   for (var i = 20; i < 400; i +=60) {  
+   for (var i = 20; i < 400; i +=60) {  //as long as the final number that happens after 60 is added to i, this loop will run
      line (i, 40, i + 60, 80);
    }
 }

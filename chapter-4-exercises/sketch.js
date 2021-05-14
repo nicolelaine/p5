@@ -11,18 +11,10 @@ function draw() {
   // put drawing code here
 
    background(204);
-  //code that is not in a for loop
-  //line (20, 40, 80, 80);
-  //line (80, 40, 140, 80);
-  //line (140, 40, 200, 80);
-  //line (200, 40, 260, 80);
-  //line (260, 40, 320, 80);
-  //line (320, 40, 380, 80);
-  //line (380, 40, 440, 80);
 
-  //code that is in a for loop
    for (var i = 20; i < 400; i +=20) {  
      line (i, 0, i + i/2, 80);
+     line (i + i/2, 80, i*1.2, 120);
    }
-   //this makes it so that it's always 20 at the top and always 30 at the bottom
+
 }

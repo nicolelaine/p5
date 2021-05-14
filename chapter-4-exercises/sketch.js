@@ -3,18 +3,19 @@
 function setup() {
   // put setup code here
 
-  createCanvas(480, 120);
-  strokeWeight(2);
+  createCanvas(600, 320);
+  noStroke()
 }
 
 function draw() {
   // put drawing code here
 
-   background(204);
+   background(0);
 
-   for (var i = 20; i < 400; i +=20) {  
-     line (i, 0, i + i/2, 80);
-     line (i + i/2, 80, i*1.2, 120);
+   for (var y = 0; y <= height; y +=40) {  
+   for (var x = 0; x <= width; x +=40 ) {
+     fill (255, 140);
+     ellipse (x, y, 40, 40);
    }
-
+  }
 }

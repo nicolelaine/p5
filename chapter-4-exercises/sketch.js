@@ -1,13 +1,10 @@
 
-//using width and heigh, which are set above in the createCanvas
-//helps us to move items around the exact canvas size
-//even if the canvas ends up changing size
-//which saves us tons of work in the end!
 
 function setup() {
   // put setup code here
 
-  createCanvas(500, 200);
+  createCanvas(480, 120);
+  strokeWeight(8);
 }
 
 function draw() {
@@ -15,8 +12,12 @@ function draw() {
 
    background(204);
   
-  line (0, 0, width, height); //line from (0,0) to (480, 120)
-  line (width, 0, 0, height);  //line from (480, 0) to (0, 120)
-  ellipse (width/2, height/2, 60, 60);
+  line (20, 40, 80, 80);
+  line (80, 40, 140, 80);
+  line (140, 40, 200, 80);
+  line (200, 40, 260, 80);
+  line (260, 40, 320, 80);
+  line (320, 40, 380, 80);
+  line (380, 40, 440, 80);
 
 }

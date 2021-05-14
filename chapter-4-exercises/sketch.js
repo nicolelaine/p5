@@ -4,7 +4,8 @@ function setup() {
   // put setup code here
 
   createCanvas(480, 120);
-  noStroke();
+  fill (255);
+  stroke(102);
 }
 
 function draw() {
@@ -12,12 +13,11 @@ function draw() {
 
    background(0);
 
-   for (var y = 0; y < height +45; y +=40) {  
-     fill (255, 140);
-     ellipse (0, y, 40, 40);
-   }
-   for (var x = 0; x < width +45; x +=40 ) {
-     fill (255, 140);
-     ellipse (x, 0, 40, 40);
+   for (var y = 20; y <= height-20; y +=10) {  
+    for (var x = 20; x <= width-20; x+=10) {
+     ellipse (x, y, 4, 4);
+     //Draw a line to the center of the display
+      line (x, y, 240, 60);
+    }
   }
 }

@@ -4,7 +4,7 @@ function setup() {
   // put setup code here
 
   createCanvas(480, 120);
-  strokeWeight(8);
+  strokeWeight(2);
 }
 
 function draw() {
@@ -21,7 +21,8 @@ function draw() {
   //line (380, 40, 440, 80);
 
   //code that is in a for loop
-   for (var i = 20; i < 400; i +=60) {  //as long as the final number that happens after 60 is added to i, this loop will run
-     line (i, 40, i + 60, 80);
+   for (var i = 20; i < 400; i +=20) {  
+     line (i, 0, i + i/2, 80);
    }
+   //this makes it so that it's always 20 at the top and always 30 at the bottom
 }

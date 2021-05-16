@@ -1,4 +1,4 @@
-var x = [];   //Declare the array
+var x = [12, 2];   //Declare and assign
 
 
 function setup() {
@@ -6,8 +6,6 @@ function setup() {
 
   createCanvas(200, 200);
 
-  x[0] = 12;   //Assign the first value in the array
-  x[1] = 2;    //Assign the second value in the array
 }
 
 function draw() {

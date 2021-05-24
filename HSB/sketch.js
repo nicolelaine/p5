@@ -8,12 +8,17 @@ function draw() {
   // put drawing code here
    colorMode(HSB, 360, 100, 100);  //360 is like 360 degrees in a circle
 
-   background(45, 50, 100);
+   for (var i = 0; i < 360; i+=10) {
+     for (var j = 0; j < 100; j+=10) {
+       noStroke();
+       fill (i,j, 100);
+       rect (i, j, 10, 10);
+     }
+   }
+  
 
-  
-  fill (180, 100, 23);
-  noStroke();
-  rectMode(CENTER);
-  rect (width/2, height/2, 400, 400);
-  
+  //tweak the last example so that mouseX and mouseY
+  //values change the saturation and brightness values
+  //for both the square and the background. What does this 
+  //look like on the HSB color cone?
 }

@@ -10,6 +10,6 @@ function setup() {
 
 function draw() {
   // put drawing code here
-
+ background (204);
  ellipse (mouseX, mouseY, 9, 9);
 }

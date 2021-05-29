@@ -4,7 +4,7 @@
 function setup() {
   // put setup code here
 
-  createCanvas(240, 120);
+  createCanvas(120, 120);
   strokeWeight (30);
 }
 
@@ -15,9 +15,13 @@ stroke(102);
 line (40, 0, 70, height);
 
 if (mouseIsPressed) {
-  stroke(0);
-} else {
-  stroke(255);
-}
+  if (mouseButton === LEFT) {
+    stroke(255);
+  } else {
+    stroke(0);
+  }
+
+
    line (0, 70, width, 50);
+}
 }

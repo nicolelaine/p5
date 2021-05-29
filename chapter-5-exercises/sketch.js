@@ -1,27 +1,21 @@
 
 
-var x = 0;
-var y =0;
-var px = 0;
-var py = 0;
-var easing = 0.05;
 
 function setup() {
   // put setup code here
 
-  createCanvas(windowWidth, windowHeight);
-  stroke (0, 102);
+  createCanvas(240, 120);
+  strokeWeight (30);
 }
 
 function draw() {
   // put drawing code here
-var targetX = mouseX;
-x+=(targetX - x) * easing;
-var targetY = mouseY;
-y+= (targetY - y) * easing;
-var weight = dist(x, y, px, py);
-strokeWeight (weight);
-line (x, y, px, py);
-py = y;
-px = x;
+background (204);
+stroke(102);
+line (40, 0, 70, height);
+
+if (mouseIsPressed === true) {
+  stroke(0);
+}
+   line (0, 70, width, 50);
 }

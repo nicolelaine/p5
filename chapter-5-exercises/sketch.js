@@ -1,27 +1,31 @@
 
+var x;
+var offset = 10;
 
 
 function setup() {
   // put setup code here
 
-  createCanvas(120, 120);
-  strokeWeight (30);
+  createCanvas(windowWidth, windowHeight);
+  x = width/2;
 }
 
 function draw() {
   // put drawing code here
 background (204);
-stroke(102);
-line (40, 0, 70, height);
 
-if (mouseIsPressed) {
-  if (mouseButton === LEFT) {
-    stroke(255);
-  } else {
-    stroke(0);
-  }
-
-
-   line (0, 70, width, 50);
+if (mouseX > x) {
+  x += 0.5;
+  offset = -10;
 }
+if (mouseX < x) {
+  x -= 0.5;
+  offset = 10;
+}
+
+//Draw arrow left or right depending on "offset" value
+line (x, 0, x, height);
+line (mouseX, mouseY, mouseX + offset, mouseY - 10);
+line (mouseX, mouseY, mouseX + offset, mouseY + 10);
+line (mouseX, mouseY, mouseX + offset * 3, mouseY);
 }

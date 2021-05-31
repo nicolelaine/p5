@@ -1,27 +1,26 @@
 
-var x = 120;
-var y = 60;
-var radius = 12;
+var x = 80;
+var y = 30;
+var w = 80;
+var h = 60;
 
 
 function setup() {
   // put setup code here
 
   createCanvas(windowWidth, windowHeight);
-  ellipseMode(RADIUS);
 }
 
 function draw() {
   // put drawing code here
 background (204);
 
-var d = dist(mouseX, mouseY, x, y);
-
-if (d < radius) {
-  radius ++;
+if ((mouseX > x) && (mouseX < x+w) &&
+(mouseY > y) && (mouseY < y+h)) {
   fill (0);
-  } else {
-    fill (255);
-  }
-  ellipse (x,y, radius, radius);
+}
+else {
+  fill (255);
+}
+  rect (x, y, w,h);
 }

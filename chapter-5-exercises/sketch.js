@@ -1,31 +1,27 @@
 
-var x;
-var offset = 10;
+var x = 120;
+var y = 60;
+var radius = 12;
 
 
 function setup() {
   // put setup code here
 
   createCanvas(windowWidth, windowHeight);
-  x = width/2;
+  ellipseMode(RADIUS);
 }
 
 function draw() {
   // put drawing code here
 background (204);
 
-if (mouseX > x) {
-  x += 0.5;
-  offset = -10;
-}
-if (mouseX < x) {
-  x -= 0.5;
-  offset = 10;
-}
+var d = dist(mouseX, mouseY, x, y);
 
-//Draw arrow left or right depending on "offset" value
-line (x, 0, x, height);
-line (mouseX, mouseY, mouseX + offset, mouseY - 10);
-line (mouseX, mouseY, mouseX + offset, mouseY + 10);
-line (mouseX, mouseY, mouseX + offset * 3, mouseY);
+if (d < radius) {
+  radius ++;
+  fill (0);
+  } else {
+    fill (255);
+  }
+  ellipse (x,y, radius, radius);
 }

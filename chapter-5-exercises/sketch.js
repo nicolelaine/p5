@@ -1,4 +1,4 @@
-
+var x = 215;
 
 
 function setup() {
@@ -9,16 +9,15 @@ function setup() {
 
 function draw() {
   // put drawing code here
-background (204);
+
 
 if (keyIsPressed) {
-  if ((key ==  "h") || (key == "H")) {
-    line (30, 60, 90, 60);
+  if (keyCode == LEFT_ARROW) {
+    x--;
   }
-  if ((key == "n") || (key =="N")) {
-    line (30, 20, 90, 100);
+  else if (keyCode == RIGHT_ARROW) {
+    x++;
   }
 }
-line (30, 20, 30, 100);
-line (90, 20, 90, 100);
+rect (x, 45, 50, 50);
 }

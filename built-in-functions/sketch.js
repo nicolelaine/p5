@@ -38,10 +38,6 @@ function keyTyped () {
   }
 }
 
-function mousePressed () {
-   spaceshipColor = color(0, 0, 255);
-}
-
-function mouseReleased () {
-  spaceshipColor = color(180);
+function mouseClicked () {
+   spaceshipColor = color(random(255), random(255), random(255));
 }

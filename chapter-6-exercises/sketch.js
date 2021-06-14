@@ -1,32 +1,17 @@
-var angle = 0.0;
-var angleDirection = 1;
-var speed = 0.005;
+
 
 function setup() {
   // put setup code here
 
   createCanvas(windowWidth, windowHeight);
+  background (204)
  
 }
 
 function draw() {
   // put drawing code here
-  background (204)
-  translate (20, 25); // Move to start position
-  rotate (angle);
-  strokeWeight (12);
-  line (0, 0, 40, 0);
-  translate (40, 0); // Move to next joint
-  rotate (angle * 2.0);
-  strokeWeight (6);
-  line (0, 0, 30, 0);
-  translate (30, 0); // Move to the next joint
-  rotate (angle * 2.5);
-  strokeWeight (3);
-  line (0, 0, 20, 0);
-
-  angle += speed * angleDirection;
-    if ((angle > QUARTER_PI) || (angle < 0)) {
-      angleDirection *=1;
-    }
+  
+  translate (mouseX, mouseY);
+  scale (mouseX / 60.0);
+  rect (-15, -15, 30, 30);
 }

@@ -1,3 +1,5 @@
+var angle = 0.0;
+
 function setup() {
   // put setup code here
 
@@ -8,6 +10,8 @@ function setup() {
 function draw() {
   // put drawing code here
 
-  rotate (mouseX / 100.0);
-  rect (-80, -10, 160, 20);
+  translate (mouseX, mouseY);
+  rotate (angle);
+  rect (-15, -15, 30, 30);
+  angle += 0.1;
 }

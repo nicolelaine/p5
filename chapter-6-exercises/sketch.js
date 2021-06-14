@@ -12,6 +12,8 @@ function draw() {
   // put drawing code here
   
   translate (mouseX, mouseY);
-  scale (mouseX / 60.0);
+  var scalar = mouseX / 60.0
+  scale (scalar);
+  strokeWeight (1.0 / scalar);
   rect (-15, -15, 30, 30);
 }

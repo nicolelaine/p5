@@ -9,5 +9,5 @@ function draw() {
   // put drawing code here
 
   rotate (mouseX / 100.0);
-  rect (40, 30, 160, 20);
+  rect (-80, -10, 160, 20);
 }

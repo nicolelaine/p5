@@ -2,18 +2,22 @@ function setup() {
   // put setup code here
 
   createCanvas(windowWidth, windowHeight);
-  angleMode(DEGREES);
-  rectMode (CENTER);
+  noStroke ();
 }
 
 function draw() {
   // put drawing code here
+ 
+  translate (frameCount % width, frameCount % height); //modulo makes it so when it
+  //gets to the width of the page it starts over and when it gets to the height of 
+  //the page it also starts over
+  rotate (radians(frameCount));
+  fill (0, 0, 0, 4);  //alpha color - makes it so we can make it a bit translucent 
+  rect (0, 0, 40, 40);
+   
+}
 
-   background (23);
-
-   translate (width/2, height/2);
-   rotate (frameCount);  //built in variable that starts from zero and counts 
-   rect (0, 0, 50, 100);
-
-   //if you want to rotate an object around itself, you must translate before you rotate!
+function mousePressed () {
+  background (255); //this calls a white background, which clears everythign out
+  //of the canvas
 }

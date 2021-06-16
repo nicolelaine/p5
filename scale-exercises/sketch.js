@@ -10,9 +10,9 @@ function draw() {
    var x = 0;
    while (x < 20) {
        push ();
-       scale (x * 0.10);
-       translate (x * 20, height/2);
        
+       translate (x * 20, height/2);
+       scale (x);
        ellipse (0, 0, 10, 10);
        pop ();
        x++;

@@ -1,6 +1,7 @@
 var radius = 40;
-var x = -radius;
+var x = 110;
 var speed = 0.5;
+var direction = 1
 
 function setup() {
   // put setup code here
@@ -13,10 +14,15 @@ function draw() {
   // put drawing code here
 
   background (0);
-  x += speed; // increase the value of x
+  x += speed * direction; 
 
-  if (x > width + radius)  {  //if the shape is off screen
-     x = -radius;  //move to left edge
+  if ((x > width - radius) || (x < radius))  {  
+     direction = -direction;  //flip direction
   }
-  arc (x, 60, radius, radius, 0.52, 5.76);
+
+  if (direction === 1) {
+    arc (x, 60, radius, radius, 0.52, 5.76); //face right
+  } else {
+    arc (x, 60, radius, radius, 3.67, 8.9); //face left
+  }
 }

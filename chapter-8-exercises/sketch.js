@@ -1,15 +1,18 @@
+var radius = 40;
+var x = -radius;
+var speed = 0.5;
+
 function setup() {
   // put setup code here
 
-  //frameRate(30); //thirty frames each second
- // frameRate(12); //twelve frames each second
- // frameRate(2); //two frames each second
-  frameRate(0.5);  //one frame every two seconds
+  createCanvas (240, 120);
+  ellipseMode (RADIUS);
 }
 
 function draw() {
   // put drawing code here
 
-   var fr = frameRate ();
-   print (fr);
+  background (0);
+  x += speed; // increase the value of x
+  arc (x, 50, radius, radius, 0.52, 5.76);
 }

@@ -14,5 +14,9 @@ function draw() {
 
   background (0);
   x += speed; // increase the value of x
-  arc (x, 50, radius, radius, 0.52, 5.76);
+
+  if (x > width + radius)  {  //if the shape is off screen
+     x = -radius;  //move to left edge
+  }
+  arc (x, 60, radius, radius, 0.52, 5.76);
 }

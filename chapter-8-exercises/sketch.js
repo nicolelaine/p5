@@ -1,19 +1,16 @@
-var time1 = 2000;
-var time2 = 4000;
-var x = 0;
+var angle = 0.0;
 
 function setup() {
   // put setup code here
-   createCanvas (480, 120);
 }
 
 function draw() {
   // put drawing code here
 
- var currentTime = millis ();
- background (204);
-    if (currentTime > time2) {
-      x -= 2;
-    }
-    ellipse (x, 60, 90, 90);
+ var sinval = sin(angle);
+ print (sinval);
+
+ var gray = map(sinval, -1, 1, 0, 255);
+ background (gray);
+ angle += 0.1;
 }

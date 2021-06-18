@@ -1,6 +1,6 @@
-var startX = 20; //Initial x coordinate
-var stopX = 160; //Final y\x coordinate
-var startY = 30;  //Initial y coodinate
+var startX = 50; //Initial x coordinate
+var stopX = 10; //Final y\x coordinate
+var startY = 10;  //Initial y coodinate
 var stopY = 80;  //Final y coordinate
 var x = startX;  //Current x coordinate
 var y = startY;  //Current y coordinate

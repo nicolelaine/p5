@@ -10,7 +10,7 @@ function setup() {
 function draw() {
   // put drawing code here
 
-   background (255);
+   //background (255);
    translate (width / 2, height /2);
    var amplitude = height / 4; //play with the altitude
 
@@ -18,7 +18,7 @@ function draw() {
    var x, y;
    y = sin (radians(angle)) * amplitude;
    // try adding an ofset to our angle here
-   x = cos (radians(angle))  * amplitude;
+   x = cos (radians(angle + 45))  * amplitude;
    fill (100);
    ellipse (x, y, 10, 10);
 }

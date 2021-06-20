@@ -9,7 +9,7 @@ function draw() {
   // put drawing code here
 
    background (255);
-   var val = sin (radians(frameCount));
+   var val = sin (radians(frameCount)) *34;
    print (val);
 
    //shows values by negative 1 and 1

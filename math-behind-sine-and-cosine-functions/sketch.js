@@ -1,4 +1,5 @@
-
+var angle = 0.0;
+var x = 0.0;
 
 function setup() {
   // put setup code here
@@ -12,8 +13,7 @@ function draw() {
   // put drawing code here
 
    background (255);
-   var angle = 0.0;
-   var x = 0.0;
+  
    translate (0, height / 2);
 
      while (x < width) {
@@ -24,4 +24,5 @@ function draw() {
       x += 10.0;
        angle += 10.0;
      }
+     x = x % width;
 }

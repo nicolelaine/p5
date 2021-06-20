@@ -18,7 +18,7 @@ function draw() {
    var x, y;
    y = sin (radians(angle)) * amplitude;
    // try adding an ofset to our angle here
-   x = sin (radians(angle))  * amplitude;
+   x = cos (radians(angle))  * amplitude;
    fill (100);
    ellipse (x, y, 10, 10);
 }

@@ -1,9 +1,11 @@
 //simple harmonic motion
-
+var periodOne = 125;
+var periodTwo = 90;
 var angle = 0.0;
-var x = 0.0;
-var period = 125;  //sets the speed of the object as it moves across the screen
-
+//var waveLengthOne = 125.0;
+//var waveLengthTwo = 90.0;
+var pointCount = 0;
+var amplitude = 200;
 
 
 function setup() {
@@ -14,16 +16,24 @@ function setup() {
 
 function draw() {
   // put drawing code here
-
-   background (255);
-   fill (0);
-   text ("period: " + period, 175, 30);
+   noFill ();
+   strokeWeight (1);
+   stroke(100);
    translate (width / 2, height / 2);
-   var amplitude = width / 2;  //play with the amplitude
-   var angle = frameCount / period * TWO_PI;  //as the period number gets smaller
-   //it moves more quickly
-   x = cos (angle) * amplitude;
+   if (pointCount > 10000) {
+    noLoop ();
+   }
 
-   fill (245, 0, 123);
-   rect (x, 0, 40, 40);
+  beginShape ();
+    for (var i = 0; i <pointCount; i++) {
+      angle = i / periodOne * TWO_PI;
+      //angle = i / waveLengthOne * TWO_PI;
+      var x = sin (angle) * amplitude;
+      angle = i / periodTwo * TWO_PI;
+     // angle = i / waveLengthTwo * TWO_PI;
+      var y = sin (angle) * amplitude;
+      vertex (x, y);
+    }
+    endShape ();
+     pointCount ++;
 }

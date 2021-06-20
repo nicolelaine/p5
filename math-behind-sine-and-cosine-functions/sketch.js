@@ -1,7 +1,14 @@
+var xspeed = 10.0;
+var x = 0.0;
+var angle = 0.0;
+
+
+
 function setup() {
   // put setup code here
 
   createCanvas(400, 400);
+  frameRate (10);
 
 }
 
@@ -9,8 +16,17 @@ function draw() {
   // put drawing code here
 
    background (255);
-   var amplitude = height / 2; //play with the amplitude
-   var y = sin (radians (frameCount)) * amplitude;
-   translate (width / 2, height / 2)
-   ellipse (0, y, 50, 50);
+   translate (0, height / 2);
+   var amplitude = height / 4; //play with the amplitude
+   var y;
+   if (x === 0) {
+      angle = 0;
+   }  else {
+      angle += 10.0;
+   }
+  y = sin (radians (angle)) * amplitude;
+   fill (100);
+   ellipse (x, y, 10, 10);
+   x += 10.0;
+    x = x % width;
 }

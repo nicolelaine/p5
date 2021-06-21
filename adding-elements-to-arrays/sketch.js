@@ -5,6 +5,8 @@ var myThirdArray = [
   "peach"
 ];
 
+var spliced = [];
+
 function setup() {
   // put setup code here
 
@@ -20,9 +22,11 @@ function draw() {
      if (myThirdArray.length === 0) {
        noLoop ();
      }
-       text (myThirdArray[ myThirdArray.length - 1], width / 2, height / 2);
+       text (myThirdArray[0], width / 2, height / 2);
+       text(spliced, width /2, height / 2 +45);
 }
 
 function mousePressed () {
-   shorten (myThirdArray);
+  spliced = myThirdArray.splice (0, 1);  //the first argument is the index that you want to remove
+   //and the second argument is how many elements you want to remove
 }

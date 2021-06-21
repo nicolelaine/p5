@@ -1,26 +1,18 @@
-var x;
-var y;
-var diameter;
-var speed;
+var jit;
 var bug;
 
-function move () {
-
-}
-function display () {
-  
-}
-
-function setup () {
-  createCanvas (480, 120);
-  background (204);
-  //Create object and pass in parameters
-  bug = new JitterBug (width / 2, height / 2, 20);
+function setup() {
+	createCanvas(480, 120);
+	background(204);
+	jit = new JitterBug (width * 0.33, height / 2, 50);
+	bug = new JitterBug (width * 0.66, height / 2, 10);
 }
 
-function draw () {
-  bug.move();
-  bug.display ();
+function draw() {
+	jit.move();
+	jit.display();
+	bug.move();
+	bug.display();
 }
 
 function JitterBug (tempX, tempY, tempDiameter) {

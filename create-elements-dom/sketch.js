@@ -1,23 +1,25 @@
 //Dom Tutorial, positioning
 //Author: Kevin Siwoff
 
-var h1;
+var elements = [];
+
 
 function setup() {
   // put setup code here
 
 
-//we define h1 here
-h1 = createElement ('h1', 'I am a moving h1 p5 element');
-
-frameRate (1);
-
+for (var i = 0; i < 10; i ++) {
+    var h1 = createElement ('h1', 'I am an h1');
+    h1.position (cos(map(i, 0, 10, 0, TWO_PI)) * 300 + windowWidth / 2, //x dimension
+                (sin(map(i, 0, 10, 0, TWO_PI)) * 300 + windowHeight / 2)); //y dimension
+            elements.push(h1);   
+       }
 }
 
 function draw () {
-  //we need to use windowWidth as opposed to width
-  //drawing to the canvas
-  h1.position(random(windowWidth), random(windowHeight));
+    for (var i = 0; i < elements.length; i++) {
+       elements[i].html(frameCount);
+    }
 }
 
 //VERY IMPORTANT TO INCLUDE THIS

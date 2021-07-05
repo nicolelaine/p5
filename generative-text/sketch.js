@@ -3,13 +3,19 @@ function setup() {
 
   createCanvas(400, 400);
   textSize (20);
-  noStroke ();
+  
+  noFill ();
+  stroke (2);
+  rect (25, 25, 350, 350);
 
-  //take a string and split it into an array of words
-   var words = riTa.tokenize("I scream you scream we all scream for ice cream");
-      for (var i = 0, i = words.length; i < j; i++)  {
-             text(words[i], 10, i * 20 + 20);
-         
+  noStroke ();
+  fill (0);
+
+  //gets the phonemes from a string of text
+   var words = riTa.getPhonemes("Got me looking so crazy right now");
+      text (words, 50, 50, 300, 100);
+
+      //you could do words.length to show many many sounds (phonetic words) in in the words
 }
 
 function draw() {

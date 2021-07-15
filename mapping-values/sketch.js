@@ -1,24 +1,17 @@
-var data = [
-  2,
-  3,
-  6,
-  1.2,
-  4,
-  4.5,
-  5.5,
-];
+var table;
+function preload () {
+table = loadTable ("data/antarctica_weather_averages.csv", "csv", "header"); //this ignores the headers in the document
+}
 
 function setup() {
   // put setup code here
 
   createCanvas(400, 400);
-  translate (0, height /2);
-  for (var i = 0; i < data.length; i++) {
-    //we map our data range
-    var circleSize = map (data[i], 1.2, 6, 5, 45);
-    translate (50, 0);
-    //use the mapped value as width & height
-    ellipse (0, 0, circleSize, circleSize);
+  textSize (24)
+  //count the rows
+  text (table.getRowCount() + "total rows in table", width / 2, height /2);
+  //count the columns
+  text (table.getColumnCount() + "total columns in table", width /2, height /2 +35);
   }
-}
+
 

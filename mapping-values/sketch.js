@@ -1,11 +1,7 @@
 var table;
-var columnData = [];
+var aveTemperatureData = [];
 
-colors = [
-  "#D100FF",
-  "#7000FF",
-  "#0900FF"
-]
+
 function preload () {
   //this table is a comma separated value "csv"
   //amd the header is specifying the column labels
@@ -18,29 +14,24 @@ function setup() {
   createCanvas(400, 400);
   textSize (24);
   textAlign (CENTER);
-  columnData = table.getColumn ("MAY");
+  //taking the data presetation of the array and making it an object
+  aveTemperatureData = table.getRow(2).arr; //average lows .arr makes it an array
 
   }
 
 
 function draw () {
   background (255);
-
-  translate (width /2 - 10, height / 4);
-  textAlign (CENTER);
   fill (0);
-  text ("May temperatures", -width/2 +10, width, 24);
-  noStroke ();
-  //in this case we loop backward since -15 (very cold) is the "smallest" in the data set
-  for (var i = columnData.length -2; i >= 0; i--) {
-    var mappedData = map(columnData[i],
-      min(columnData),
-      max(columnData),
-      100,
-      10);
-      fill (colors[i % colors.length]);
-      rect (0, 0, 20, mappedData);
-      fill (0);
-      text (columnData[i], 35, mappedData);
+  translate (0, height/2);
+  beginShape ();
+  for (var i = 2; i < aveTemperatureData.length - 3; i++) {
+  var temp = aveTemperatureData[i] * 5;
+  var x = width / (aveTemperatureData.length - 1) * i;
+  vertex (x, -temp);
+  fill (0); //makes the ellipses have fills
+  ellipse (x, -temp, 10, 10);
+  noFill ();  //makes sure that the rest of the shape is not filled
   }
+  endShape ();
 }

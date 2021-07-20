@@ -1,27 +1,25 @@
-
-var bgImg;
-var elvisImg;
-var numElvises = 5;
+var img;
 
 function preload (); {
-  imgBg = loadImage ('Blue_sky_south_of_France.png');
-  elvisImg = loadImage ('elvis-flaming-star.png');
+  img = loadImage ('Titian_Venus_of_Urbino.png');
+  
 }
 
 function setup() {
   // put setup code here
 
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(400, 400);
 }
 
 function draw() {
   // put drawing code here
-  background (bgImg);
+  background (255);
+  var resizedHeight = img.height * width / img.widht;
+ 
+  image (img, 0, 0, img.width, img.height, 0, 0, width, resizedHeight);
 
-   //try different tints and repetition patterns
-   tint (i*20, 100, 0, 150);
-   for (var i = 0; i < numElvises; i++) {
-     tint (i*20, i*20, 0, 150);
-     image (elvisImg, i*20, 0, elvisImg.width/2, elvisImg.height/2);
+  filter (THRESHOLD, map(mouseX, 0, width, 0, 1));
+  filter (POSTERIZE, map(mouseX, 0, width, 2, 5)); //posterize is most strong between 2 and 5
+  filter (INVERT); //makes it look like a film negative
+  filter (GRAY); //make a black and white image
    }
-}

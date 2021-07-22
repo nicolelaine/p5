@@ -14,17 +14,22 @@ function setup() {
 
   createCanvas(windowWidth, windowHeight);
   //specify multiple formats for different browsers
-  space = createVideo (["media/anni003.mp4"]);
-  space.loop (); //set the video to loop and 
-  space.volume (); //we set the volume to 0 to
+  //you can also create a backup video format in case mp4 does not work by putting it next in the array
+  space = createVideo (["media/anni003.mp4"]);  //video DOM element with an array inside with a string to where the video lives
+  space.loop (); //set the video to loop 
+  space.volume (); //we set the volume to 0 to mute it
 
-  space.showControls ();
+  space.showControls (true);
   //a centered video element
-  space.postion (windowWidth/2 - (space.width/2))
+  space.postion (width/2 - space.width/2, height / 2 - space.height/2);
+
+  textSize (32);
 }
 
 function draw() {
   // put drawing code here
 
    background (0);
+   text("current time is " + space.time(), 20, 32); //it's called space, as that's the variable in this case for the video. the numbers show it's location on screen
+   text("video duration in seconds is " + space.duration(), 20, 64);
 }
